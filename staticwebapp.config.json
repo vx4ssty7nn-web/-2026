@@ -1,0 +1,19 @@
+{
+  "navigationFallback": {
+    "rewrite": "/"
+  },
+  "routes": [
+    {
+      "route": "/api/auth/*",
+      "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/api/*",
+      "allowedRoles": ["authenticated"]
+    }
+  ],
+  "globalHeaders": {
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff"
+  }
+}
